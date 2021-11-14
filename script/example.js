@@ -1,74 +1,43 @@
- let x = "6";
- let y = "8";
-let q = "2";
+let s = 'string'
 
+String.prototype.customString = function() {
+   console.log('my custom string is: string')
+}
+s.customString()
 
-if ( x > y && x > q ) {
-    console.log("largestNmb x")
-}else if ( y > x && y > q) { 
-    console.log("largestNmb y")
-} else if ( q > x && q > y) {
-    console.log("largestNmb q")
+function Person ( name , lastName) {
+   this.name = name;
+   this.lastName = lastName;
 }
 
-let std1 = "70";
-let std2 = "50";
-let std3 = "94";
-let std4 = "65";
-
-if ( std1 < 60) {  console.log('F')}
-else if ( std1 < 70 ) { 
-   console.log('D')
-}  else if ( std1 < 80 ) { 
-   console.log('C')
-}  else if ( std1 < 90 ) { 
-   console.log('B')
-} else if ( std1 < 100 ) { 
-   console.log('A')
-} 
-
-if ( std2 < 60) {  console.log('F')}
-else if ( std2 < 70 ) { 
-   console.log('D')
-}  else if ( std2 < 80 ) { 
-   console.log('C')
-}  else if ( std < 90 ) { 
-   console.log('B')
-} else if ( std2 < 100 ) { 
-   console.log('A')
-} 
-if ( std3 < 60) {  console.log('F')}
-else if ( std3 < 70 ) { 
-   console.log('D')
-}  else if ( std3 < 80 ) { 
-   console.log('C')
-}  else if ( std3 < 90 ) { 
-   console.log('B')
-} else if ( std3 < 100 ) { 
-   console.log('A')
-} 
-if ( std4 < 60) {  console.log('F')}
-else if ( std4 < 70 ) { 
-   console.log('D')
-}  else if ( std4 < 80 ) { 
-   console.log('C')
-}  else if ( std4 < 90 ) { 
-   console.log('B')
-} else if ( std4 < 100 ) { 
-   console.log('A')
-} 
+let person = new Person ('gaga', 'veshaguri');
+console.log( person.name + ' ' + person.lastName)
 
 
 
-//multiply tablet 
+let obj1 = { name: 'name' }; 
+let obj2 = {lastname: 'lastname'}
+obj2.__proto__ = obj1
+console.log(obj2.name)
 
-let result = ""
-for (let i = 1; i < 11; i++) {
-   for (let a = 1; a < 11; a++)
-   {
-      result += (i * a) + " " ;
+let com = {
+   name:"ford",
+   type:'sport',
+   model:'mustang',
+   realese: 1995
+}
+
+for (let key in com) { 
+ console.log(key , com[key])
+}
+
+let matrix1 = [ [1,2,3,4], [5,6,7,8], [9, 10, 11,12] ]
+let matrix2 = [ [13, 14, 15,16], [17, 18,19,20], [21,22,23,24] ]
+
+for ( let i = 0; i < matrix1.length; i++){
+   for(let x = 0; x < matrix1[i].length; x++){
+      let matrix3 = matrix1[i][x] + matrix2[i][x]  
+      console.log(matrix3)
+
    }
-
-}result += '\n'
-
-console.log ( result)
+} 
